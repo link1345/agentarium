@@ -1,0 +1,19 @@
+{
+  "name": "agentarium-codex-app",
+  "version": "0.3.0",
+  "description": "ChatGPTでペット用アニメーション画像を生成し、Agentariumの色違いパックを作るアプリ。",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agentarium Pet Studio",
+    "shortDescription": "ChatGPTでペット画像と色違いを作成",
+    "longDescription": "ChatGPT Apps SDK / MCPと画像生成スキルで、互換スプライトシートとパレットを作成します。",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Agentarium用のオリジナルペットを生成してください。"
+  },
+  "mcpServers": "./.mcp.json"
+}

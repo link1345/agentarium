@@ -1,0 +1,22 @@
+{
+  "mode": "selective-hsv-hue-family",
+  "sourceHue": 0.7049060183847351,
+  "hueTolerance": 0.11,
+  "minSaturation": 0.12,
+  "minValue": 0.45,
+  "preserveSaturation": true,
+  "preserveValue": true,
+  "preserveAlpha": true,
+  "measurement": "Weighted HSV hue of final opaque lavender fur pixels: hue .60-.85, saturation .12-.65, value >.55, alpha >240.",
+  "palettes": {
+    "lavender": "#b8a0ed",
+    "mint": "#79cbb8",
+    "peach": "#e9aa80",
+    "rose": "#e9a0bc"
+  },
+  "neutralLookCell": {
+    "row": 0,
+    "column": 6
+  },
+  "note": "Only the fur hue family changes. Neutral whites, teal ears, and dark navy outlines remain fixed. Row0 column6 is v2 neutral look, not an idle animation frame."
+}
