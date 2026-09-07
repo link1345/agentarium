@@ -23,4 +23,4 @@ Windowsの`\\?\`形式のパスにも対応した。Codexデータは読み取�
 - Guaで「作業中」とフラスコを確認し、実際の応答完了後に「完了」とプレゼント、寝姿を確認。模擬イベントの投入はしていない。
 - Gua撮影: `artifacts/screenshots/v034-root-working.png`、`v034-real-task-working.png`、`v034-real-task-completed.png`（開発環境内）。
 
-Codexの内部形式への依存は残る。入力待ち・CI失敗・レビュー到着の自動識別を追加した修正ではない。
+Codexの内部形式への依存は残る。
