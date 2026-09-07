@@ -28,7 +28,30 @@ node tests/mcp-smoke.mjs # 起動中サーバーを検証。Agentariumリポジ�
 
 ローカルMCPの初期化、ツール一覧、レシピ取得、スキル全リソースのハッシュ、拒否するURL、画像の寸法・アルファ・白／暗色保持をテストしています。ChatGPTの実アカウントでの接続・生成ループは未検証です。
 
-## ChatGPTへ接続
+## AIエージェントに追加を依頼する
+
+[APEX Coach Pluginの「Ask an AI agent」](https://github.com/link1345/apex-coach-plugin#ask-an-ai-agent)と同様に、リポジトリURLをAIエージェントへ渡して導入を依頼できます。ChatGPTデスクトップアプリのWorkモード、またはCodexで新しいタスクを作り、次の文を貼り付けてください。
+
+```text
+https://github.com/link1345/agentarium
+このリポジトリの agentarium-codex-app をローカルプラグインとして追加してください。
+agentarium-codex-app/README.md と .codex-plugin/plugin.json、.mcp.json を確認し、
+Node.js 22以上とBunの確認、依存関係のインストール、MCPサーバーの起動を行ってください。
+既存の個人用マーケットプレイスを維持して、このプラグインのエントリを追加し、
+Plugins Directoryからインストールできる状態にしてください。
+サーバーのヘルスチェックとMCPツール一覧を確認し、
+アプリの再起動・インストール操作など、利用者に必要な残りの手順を案内してください。
+```
+
+このリポジトリはプラグイン本体を`agentarium-codex-app/`に同梱していますが、マーケットプレイス定義は同梱していません。AIエージェントがローカルに取得したプラグインを個人用マーケットプレイスへ登録する形になります。APEX Coachのマーケットプレイス追加コマンドのURLだけを置き換える方法には対応していません。
+
+登録後はデスクトップアプリを再起動し、Plugins Directoryで追加先のマーケットプレイスから **Agentarium Pet Studio** をインストールして、新しいタスクで使用します。`.mcp.json`は`http://127.0.0.1:8788/mcp`に接続する設定なので、利用中はMCPサーバーを起動しておいてください。サーバーはプラグインの追加だけでは自動起動しません。
+
+ローカルプラグインの追加方法は [OpenAI公式のパッケージ手順](https://developers.openai.com/plugins/build/plugins)に基づきます。この導入経路の実アカウントでの通し確認は未実施です。
+
+## ChatGPTへHTTPSで接続
+
+ChatGPTからリモートMCPサーバーへ接続する場合は、次の手順を使用します。AIエージェントにこの準備を依頼することもできます。
 
 1. このサーバーをHTTPSで到達できる環境へ配置するか、開発用トンネルにつなぐ。
 2. `PUBLIC_BASE_URL`をそのHTTPSオリジンに設定して再起動する。ダウンロードURLにも使います。
